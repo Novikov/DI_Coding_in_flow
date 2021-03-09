@@ -3,9 +3,7 @@ package com.app.coding_in_flow;
 import dagger.Component;
 
 //Injector
-@Component
+@Component(modules = WheelsModule.class)
 public interface CarComponent {
-    Car getCar();
-
     void inject(MainActivity mainActivity);
 }
