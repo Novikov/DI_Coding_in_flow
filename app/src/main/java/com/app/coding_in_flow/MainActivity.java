@@ -3,7 +3,9 @@ package com.app.coding_in_flow;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+import com.app.coding_in_flow.car.Car;
+import com.app.coding_in_flow.dagger.CarComponent;
+import com.app.coding_in_flow.dagger.DaggerCarComponent;
 
 import javax.inject.Inject;
 

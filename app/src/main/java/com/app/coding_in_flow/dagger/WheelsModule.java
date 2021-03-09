@@ -1,4 +1,8 @@
-package com.app.coding_in_flow;
+package com.app.coding_in_flow.dagger;
+
+import com.app.coding_in_flow.car.Rims;
+import com.app.coding_in_flow.car.Tires;
+import com.app.coding_in_flow.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;

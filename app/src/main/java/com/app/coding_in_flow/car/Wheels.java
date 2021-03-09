@@ -1,6 +1,4 @@
-package com.app.coding_in_flow;
-
-import javax.inject.Inject;
+package com.app.coding_in_flow.car;
 
 public class Wheels {
     //we don't own this class so we can't annotate it with @Inject
