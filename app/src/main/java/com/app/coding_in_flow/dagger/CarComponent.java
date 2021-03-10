@@ -1,16 +1,20 @@
 package com.app.coding_in_flow.dagger;
 
 import com.app.coding_in_flow.MainActivity;
+import com.app.coding_in_flow.car.Car;
 import com.app.coding_in_flow.car.PetrolEngine;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 
-//Injector
+@Singleton
 @Component(modules = {WheelsModule.class, PetrolEngineModule.class})
 public interface CarComponent {
+    Car getCar();
+
     void inject(MainActivity mainActivity);
 
     @Component.Builder

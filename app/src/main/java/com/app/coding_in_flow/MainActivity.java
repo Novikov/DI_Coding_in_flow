@@ -11,7 +11,7 @@ import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
     @Inject
-    Car car;
+    Car car1,car2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         component.inject(this);
-        car.drive();
+        car1.drive();
+        car2.drive();
     }
 }
