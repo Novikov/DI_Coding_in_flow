@@ -5,8 +5,5 @@ import javax.inject.Singleton;
 
 @Singleton
 public class Driver {
-
-    @Inject
-    public Driver() {
-    }
+    //we don't own this code
 }

@@ -2,8 +2,11 @@ package com.app.coding_in_flow.car;
 
 import android.util.Log;
 
+import com.app.coding_in_flow.dagger.PerActivity;
+
 import javax.inject.Inject;
 
+@PerActivity
 public class Car {
     private static final String TAG = "Car";
     private Engine engine;
