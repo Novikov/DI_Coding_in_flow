@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.app.coding_in_flow.car.Car;
 import com.app.coding_in_flow.dagger.ActivityComponent;
-import com.app.coding_in_flow.dagger.DaggerActivityComponent;
+import com.app.coding_in_flow.dagger.DieselEngineModule;
 
 import javax.inject.Inject;
 
@@ -17,11 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActivityComponent component = DaggerActivityComponent.builder()
-                .horsePower(120)
-                .engineCapacity(1400)
-                .appComponent(((ExampleApp)getApplication()).getAppComponent())
-                .build();
+        ActivityComponent component = ((ExampleApp)getApplication())
+                .getAppComponent()
+                .getActivityComponent(new DieselEngineModule(140));
 
         component.inject(this);
         car1.drive();
